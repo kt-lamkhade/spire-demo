@@ -19,5 +19,5 @@ Create Server Configmap
 
 $ kubectl apply  -f server-configmap.yaml  -f server-statefulset.yaml -f server-service.yaml
 
-
+aws eks update-kubeconfig --name spire-demo --region=us-east-1
 
