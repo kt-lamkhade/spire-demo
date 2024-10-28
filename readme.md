@@ -12,7 +12,7 @@ kubectl apply -f spire-namespace.yaml
    
 Create Server Bundle Configmap, Role & ClusterRoleBinding
 
-$ kubectl apply \
+$ kubectl apply \\
     -f server-account.yaml \
     -f spire-bundle-configmap.yaml \
     -f server-cluster-role.yaml
