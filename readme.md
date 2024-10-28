@@ -18,3 +18,7 @@ $ kubectl apply -f server-account.yaml  -f spire-bundle-configmap.yaml -f server
 Create Server Configmap
 
 $ kubectl apply  -f server-configmap.yaml  -f server-statefulset.yaml -f server-service.yaml
+
+#AKIAZI2LGIRRH6MIDEV-2
+#QaHReSv3XE/Lyv3wuUTdo80DeYET4vlsj6FrF5G-8
+
