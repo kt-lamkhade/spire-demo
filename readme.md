@@ -21,4 +21,14 @@ $ kubectl apply  -f server-configmap.yaml  -f server-statefulset.yaml -f server-
 
 aws eks update-kubeconfig --name spire-demo --region=us-east-1
 
-https://github.com/devopsproin/certified-kubernetes-administrator/tree/main/PV-PVC
+# https://github.com/devopsproin/certified-kubernetes-administrator/tree/main/PV-PVC
+
+helm repo add aws-ebs-csi-driver https://kubernetes-sigs.github.io/aws-ebs-csi-driver
+helm repo update
+
+
+helm upgrade --install aws-ebs-csi-driver \
+    --namespace kube-system \
+    aws-ebs-csi-driver/aws-ebs-csi-driver
+    
+kubectl get pods -n kube-system -l app.kubernetes.io/name=aws-ebs-csi-driver    
