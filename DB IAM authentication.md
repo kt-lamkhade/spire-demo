@@ -58,13 +58,14 @@ Create a new IAM role for EKS with the following trust relationship:
   "Statement": [
     {
       "Effect": "Allow",
-      "Principal": {
-        "Service": "eks.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
+      "Action": [
+        "rds-db:connect"
+      ],
+      "Resource": "arn:aws:rds-db:your-region:your-account-id:dbuser:your-db-cluster-id/your-db-username"
     }
   ]
 }
+
 ```
 
 Attach the previously created policy to this role.
